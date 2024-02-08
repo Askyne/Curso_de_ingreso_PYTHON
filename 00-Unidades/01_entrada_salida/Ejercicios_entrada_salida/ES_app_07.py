@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Juan Pablo
+apellido: Puglia
 ---
 Ejercicio: entrada_salida_07
 ---
@@ -48,18 +48,43 @@ class App(customtkinter.CTk):
         self.btn_dividir = customtkinter.CTkButton(master=self, text="Dividir", command=self.btn_dividir_on_click)
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
+
     def btn_sumar_on_click(self):
-        pass
+        primer_numero = int(self.txt_operador_a.get())
+        segundo_numero = int(self.txt_operador_b.get())
+
+        sumada = primer_numero + segundo_numero
+        frase_suma = "La suma entre " + str(primer_numero) + " y " + str(segundo_numero) + " es: " + str(sumada)
+
+        alert("Suma", frase_suma)
 
     def btn_restar_on_click(self):
-        pass
+        primer_numero = int(self.txt_operador_a.get())
+        segundo_numero = int(self.txt_operador_b.get())
+    
+        restada = primer_numero - segundo_numero
+        frase_resta = "La resta entre " + str(primer_numero) + " y " + str(segundo_numero) + " es: " + str(restada)
+
+        alert("Resta", frase_resta)
 
     def btn_multiplicar_on_click(self):
-        pass
+        primer_numero = int(self.txt_operador_a.get())
+        segundo_numero = int(self.txt_operador_b.get())
+
+        multiplicada = primer_numero * segundo_numero
+        frase_multiplicacion = "La multiplicacion entre " + str(primer_numero) + " y " + str(segundo_numero) + " es: " + str(multiplicada)
+
+        alert("Multiplicacion", frase_multiplicacion)
 
     def btn_dividir_on_click(self):
-        pass
-        
+        primer_numero = int(self.txt_operador_a.get())
+        segundo_numero = int(self.txt_operador_b.get())
+
+        divisada = primer_numero / segundo_numero
+        frase_division = "La division entre " + str(primer_numero) + " y " + str(segundo_numero) + " es: " + str(divisada)
+
+        alert("Division", frase_division)
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
