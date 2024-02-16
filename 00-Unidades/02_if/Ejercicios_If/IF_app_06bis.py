@@ -39,7 +39,21 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        altura = self.txt_altura.get()
+        altura = int(altura)
+        mensaje = "Usted debera jugar en la posicion de: "
+        if altura >= 200:
+            mensaje = mensaje + "Ala-Pívot o Pívot"
+            alert("Mensaje",mensaje)
+        if altura < 160:
+            mensaje = mensaje + "Base"
+            alert("Mensaje",mensaje)
+        if altura >= 160 and altura <=179:
+            mensaje = mensaje + "Escolta"
+            alert("Mensaje",mensaje)
+        if altura >= 180 and altura <=199:
+            mensaje = mensaje + "Alero"
+            alert("Mensaje",mensaje)
 
         
         
